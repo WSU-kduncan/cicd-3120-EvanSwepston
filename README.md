@@ -16,3 +16,8 @@ docker run -dit --name my-running-app -p 8080:80 my-apache2
 ```
 "my-running-app" could be changed to a different name to distinguish between multiple containers
 - The project can be viewed by going to [http://localhost:8080](http://localhost:8080) in a browser
+
+## Part 2
+- To create a DockerHub public repo, I went to DockerHub, then clicked `Repositories` -> `Create Repository`, entered a name and clicked `Create`
+- To set up GitHub Secrets, in the repository I clicked `Settings` -> `Secrets` -> `Actions`
+- To set up a workflow, I created a directory `.github`, and inside that directory `workflows`. I used code from [GitHub Docs](https://docs.github.com/en/actions/publishing-packages/publishing-docker-images#publishing-images-to-docker-hub) to create a file named `main-workflow.yml` that can be used to build and push a Docker image to DockerHub
