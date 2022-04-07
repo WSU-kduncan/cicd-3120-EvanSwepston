@@ -20,4 +20,6 @@ docker run -dit --name my-running-app -p 8080:80 my-apache2
 ## Part 2
 - To create a DockerHub public repo, I went to DockerHub, then clicked `Repositories` -> `Create Repository`, entered a name and clicked `Create`
 - To set up GitHub Secrets, in the repository I clicked `Settings` -> `Secrets` -> `Actions`
-- To set up a workflow, I created a directory `.github`, and inside that directory `workflows`. I used code from [GitHub Docs](https://docs.github.com/en/actions/publishing-packages/publishing-docker-images#publishing-images-to-docker-hub) to create a file named `main-workflow.yml` that can be used to build and push a Docker image to DockerHub
+- To set up a workflow, I created a directory `.github`, and inside that directory `workflows`. I used code from [GitHub Docs](https://docs.github.com/en/actions/publishing-packages/publishing-docker-images#publishing-images-to-docker-hub) to create a file named `main-workflow.yml` that can be used to build and push a Docker image to DockerHub. I had to make the following changes:
+  - Remove `release:` and `types: [published` after `on` and instead write `push:`
+  - Changed what was after `tags:` to `evanswepston/project5` which is my DockerHub repo
