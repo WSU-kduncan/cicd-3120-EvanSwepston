@@ -2,6 +2,5 @@
   {
     "id": "redeploy-webhook"
     "execute-command": "/home/ubuntu/restart.sh"
-    "command-working-directory": "/var/webhook"
   }
 ]
